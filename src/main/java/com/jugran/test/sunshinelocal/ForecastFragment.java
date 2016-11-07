@@ -8,6 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,8 +67,23 @@ public class ForecastFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+
+        String[] forecastArray = {
+                "Today      -   Sunny   - 24/17",
+                "Tomorrow   -   Smog    - 24/14",
+                "Wed        -   Smog    - 23/15",
+                "Thurs      -   Smog    - 21/11",
+                "Friday     -   Smog    - 22/16",
+                "Saturday   -   Clear   - 22/16",
+                "Sunday     -   Clouded - 20/15"
+        };
+
+        List<String> weeklyForecast = new ArrayList<String>(Arrays.asList(forecastArray));
+        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        return rootView;
+        // Inflate the layout for this fragment/*
+/*        return inflater.inflate(R.layout.fragment_main, container, false);*/
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
