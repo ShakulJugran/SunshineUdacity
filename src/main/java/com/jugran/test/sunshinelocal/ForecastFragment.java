@@ -73,8 +73,8 @@ public class ForecastFragment extends Fragment {
         String[] forecastArray = {
                 "Today      -   Sunny   - 24/17",
                 "Tomorrow   -   Smog    - 24/14",
-                "Wed        -   Smog    - 23/15",
-                "Thurs      -   Smog    - 21/11",
+                "Wednesday  -   Smog    - 23/15",
+                "Thursday   -   Smog    - 21/11",
                 "Friday     -   Smog    - 22/16",
                 "Saturday   -   Clear   - 22/16",
                 "Sunday     -   Clouded - 20/15"
@@ -93,8 +93,6 @@ public class ForecastFragment extends Fragment {
         listView.setAdapter(mForecastAdapter);
 
         return rootView;
-        // Inflate the layout for this fragment/*
-/*        return inflater.inflate(R.layout.fragment_main, container, false);*/
 
     }
 
@@ -111,8 +109,9 @@ public class ForecastFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+            // TODO: Quickfix to stop runtime dump
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
         }
     }
 
